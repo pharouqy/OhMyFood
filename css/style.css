@@ -355,7 +355,7 @@ section .title-heart .heart:hover .heart-2 {
     margin: 0 50px 50px 0;
   }
   section img.entete {
-    height: 60vh;
+    height: 100vh;
   }
   section.main .repas .card2 {
     width: 26%;
