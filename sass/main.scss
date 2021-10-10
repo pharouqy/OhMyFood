@@ -46,8 +46,34 @@ body {
   max-width: 1440px;
 }
 header {
-  h1 {
-    text-align: center;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  > div:nth-child(1) {
+    font-size: 2.5rem;
+    margin-left: 1%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    a {
+      color: inherit;
+      text-decoration: none;
+  }
+  }
+  > div:nth-child(2) {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      text-align: center;
+    }
   }
 }
 main {
