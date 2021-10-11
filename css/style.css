@@ -223,6 +223,9 @@ section.main .repas .card2 {
   grid-template-areas: ". euro";
   animation: cardApear 2s ease-in-out 1 normal both;
 }
+section.main .repas .card2 .text2 {
+  width: 265px;
+}
 section.main .repas .card2.item-1 {
   animation-delay: 0.8s;
 }
@@ -243,6 +246,8 @@ section.main .repas .card2 p {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  margin-top: 10px;
+  margin-bottom: 10px;
   width: 100%;
   animation: text-shrink-reverse 0.5s ease 0s 1 reverse both;
 }
@@ -252,14 +257,14 @@ section.main .repas .card2 .price2 {
   grid-area: euro;
   padding: 25px;
   position: absolute;
-  top: 30px;
+  top: 15px;
   left: -4.5em;
   animation: reverse-slidePrice 0.5s ease-in-out 0s 1 reverse forwards;
 }
 section.main .repas .card2 .slide2 {
   background-color: aquamarine;
   width: 25%;
-  height: 100px;
+  height: 72px;
   display: flex;
   align-content: center;
   justify-content: center;
@@ -487,6 +492,58 @@ section .title-heart .heart:hover .heart-2 {
   to {
     top: 0px;
     opacity: 1;
+  }
+}
+/* loader */
+.lds-hourglass {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+  opacity: 1;
+  height: 100%;
+  left: 0;
+  background-color: #9356dc;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  animation: loader 15s ease 0s 1 normal forwards;
+}
+
+.lds-hourglass:after {
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  margin: 8px;
+  box-sizing: border-box;
+  border: 32px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-hourglass 1.2s infinite;
+}
+
+@keyframes loader {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    top: 100%;
+  }
+}
+@keyframes lds-hourglass {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  100% {
+    transform: rotate(1800deg);
   }
 }
 
