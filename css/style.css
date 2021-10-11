@@ -510,7 +510,6 @@ section .title-heart .heart:hover .heart-2 {
   justify-content: center;
   animation: loader 15s ease 0s 1 normal forwards;
 }
-
 .lds-hourglass:after {
   content: " ";
   display: block;
