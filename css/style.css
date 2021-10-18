@@ -225,6 +225,7 @@ section.main .repas .card2 {
 }
 section.main .repas .card2 .text2 {
   width: 265px;
+  padding: 0 0 0 15px;
 }
 section.main .repas .card2.item-1 {
   animation-delay: 0.8s;
@@ -393,7 +394,13 @@ section .title-heart .heart:hover .heart-2 {
     height: 100vh;
   }
   section.main .repas .card2 {
-    width: 26%;
+    width: 32%;
+  }
+  section.main .repas .card2 .price2 {
+    animation: slide-4k-reverse 0.5s ease-in-out 0s 1 normal forwards;
+  }
+  section.main .repas .card2:hover .price2 {
+    animation: slide-4k 1.5s ease-in-out 0s 1 normal forwards;
   }
   section div a.carte {
     margin: 10px auto;
@@ -492,6 +499,22 @@ section .title-heart .heart:hover .heart-2 {
   to {
     top: 0px;
     opacity: 1;
+  }
+}
+@keyframes slide-4k {
+  from {
+    left: -4.5em;
+  }
+  to {
+    left: -11.5em;
+  }
+}
+@keyframes slide-4k-reverse {
+  from {
+    left: -11.5em;
+  }
+  to {
+    left: -4.5em;
   }
 }
 /* loader */

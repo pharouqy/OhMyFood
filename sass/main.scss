@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 $left1: -4.5em;
 $left2: -9.5em;
@@ -247,6 +247,7 @@ section {
         animation: cardApear 2s ease-in-out 1 normal both;
         .text2 {
           width: 265px;
+          padding: 0 0 0 15px;
         }
         @for $i from 1 through 5 {
           &.item-#{$i} {
@@ -396,7 +397,8 @@ section {
   }
 }
 
-@media (min-width: 1024px) { //Dekstop & 4k
+@media (min-width: 1024px) {
+  //Dekstop & 4k
   main {
     > div:nth-child(3) {
       margin: 50px 0px 0px 90px;
@@ -413,7 +415,15 @@ section {
     &.main {
       .repas {
         .card2 {
-          width: 26%;
+          width: 32%;
+          .price2 {
+            animation: slide-4k-reverse 0.5s ease-in-out 0s 1 normal forwards;
+          }
+          &:hover {
+            .price2 {
+              animation: slide-4k 1.5s ease-in-out 0s 1 normal forwards;
+            }
+          }
         }
       }
     }
@@ -426,7 +436,8 @@ section {
     }
   }
 }
-@media (max-width: 1023px) and (min-width: 426px) { //Laptop & tablette
+@media (max-width: 1023px) and (min-width: 426px) {
+  //Laptop & tablette
   main {
     div:nth-child(3) {
       > div:nth-child(1) {
@@ -533,6 +544,22 @@ section {
   to {
     top: 0px;
     opacity: 1;
+  }
+}
+@keyframes slide-4k {
+  from {
+    left: -4.5em;
+  }
+  to {
+    left: -11.5em;
+  }
+}
+@keyframes slide-4k-reverse {
+  from {
+    left: -11.5em;
+  }
+  to {
+    left: -4.5em;
   }
 }
 /* loader */
