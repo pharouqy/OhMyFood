@@ -49,6 +49,7 @@ header {
   display: flex;
   align-content: center;
   justify-content: center;
+  background-color: #fff;
   > div:nth-child(1) {
     font-size: 2.5rem;
     margin-left: 1%;
@@ -77,6 +78,7 @@ header {
   }
 }
 main {
+  background-color: #fff;
   > div:nth-child(1) {
     text-align: center;
     padding: 25px 0px;
@@ -568,7 +570,7 @@ section {
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 1;
+  z-index: -5;
   opacity: 1;
   height: 100%;
   left: 0;
@@ -576,7 +578,7 @@ section {
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
-  animation: loader 15s ease 0s 1 normal forwards;
+  animation: loader 3s ease 0s 1 normal;
   &:after {
     content: " ";
     display: block;
@@ -592,11 +594,14 @@ section {
 }
 @keyframes loader {
   from {
-    opacity: 1;
+    //opacity: 1;
+    z-index: 99999;
   }
   to {
-    opacity: 0;
-    top: 100%;
+    //opacity: 0;
+    //top: 100%;
+    z-index: 0;
+    //left: 100%;
   }
 }
 @keyframes lds-hourglass {

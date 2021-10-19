@@ -11,6 +11,7 @@ header {
   display: flex;
   align-content: center;
   justify-content: center;
+  background-color: #fff;
 }
 header > div:nth-child(1) {
   font-size: 2.5rem;
@@ -39,6 +40,9 @@ header > div:nth-child(2) h1 {
   text-align: center;
 }
 
+main {
+  background-color: #fff;
+}
 main > div:nth-child(1) {
   text-align: center;
   padding: 25px 0px;
@@ -523,7 +527,7 @@ section .title-heart .heart:hover .heart-2 {
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 1;
+  z-index: -5;
   opacity: 1;
   height: 100%;
   left: 0;
@@ -531,7 +535,7 @@ section .title-heart .heart:hover .heart-2 {
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
-  animation: loader 15s ease 0s 1 normal forwards;
+  animation: loader 3s ease 0s 1 normal;
 }
 .lds-hourglass:after {
   content: " ";
@@ -548,11 +552,10 @@ section .title-heart .heart:hover .heart-2 {
 
 @keyframes loader {
   from {
-    opacity: 1;
+    z-index: 99999;
   }
   to {
-    opacity: 0;
-    top: 100%;
+    z-index: 0;
   }
 }
 @keyframes lds-hourglass {
